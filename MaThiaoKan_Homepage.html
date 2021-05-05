@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Thiao Kan</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+        /* Smallest devices */
+        @media screen and (max-width: 306px) {
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+        
+            .nav-bar {
+                background-color: #7b994e;
+                padding: 0px 10px 0 8px;
+                height: 100px;
+                display: block;
+                text-align: center;
+            }
+
+            .logo-pic {
+                height: 25px;
+                padding: 10px;
+            }
+
+            .login-register {
+                display: flex;
+                padding: 10px;
+                font-family: 'Titillium Web', sans-serif;
+                font-size: 12px;
+                justify-content: center;
+            }
+
+            .image-cropper {
+                width: 25px;
+                height: 25px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            .profile-pic {
+                height: 100%;
+                width: auto;
+            }
+
+            .login {
+                padding: 4px 6px 4px 6px;
+            }
+
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            a:active {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            .register {
+                text-align: center;
+                padding: 1px 0px 1px 0px;
+                border-style: solid;
+                width: 65px;
+            }
+        }
+
+        /* Small devices */
+        @media screen and (min-width: 307px) and (max-width: 345px) {
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+        
+            .nav-bar {
+                background-color: #7b994e;
+                padding: 0px 10px 0 8px;
+                height: 45px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .logo-pic {
+                height: 25px;
+                padding: 10px;
+            }
+
+            .login-register {
+                display: flex;
+                padding: 10px;
+                font-family: 'Titillium Web', sans-serif;
+                font-size: 12px;
+            }
+
+            .image-cropper {
+                width: 25px;
+                height: 25px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            .profile-pic {
+                height: 100%;
+                width: auto;
+            }
+
+            .login {
+                padding: 4px 6px 4px 6px;
+            }
+
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            a:active {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            .register {
+                text-align: center;
+                padding: 1px 0px 1px 0px;
+                border-style: solid;
+                width: 65px;
+            }
+        }
+
+        /* Mobile devices */
+        @media screen and (min-width: 346px) and (max-width: 480px) { 
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+        
+            .nav-bar {
+                background-color: #7b994e;
+                padding: 0px 10px 0 8px;
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .logo-pic {
+                height: 30px;
+                padding: 10px;
+            }
+
+            .login-register {
+                display: flex;
+                padding: 10px;
+                font-family: 'Titillium Web', sans-serif;
+                font-size: 14px;
+            }
+
+            .image-cropper {
+                width: 30px;
+                height: 30px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            .profile-pic {
+                height: 100%;
+                width: auto;
+            }
+
+            .login {
+                padding: 4px 6px 4px 6px;
+            }
+
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            a:active {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            .register {
+                text-align: center;
+                padding: 1px 0px 1px 0px;
+                border-style: solid;
+                width: 65px;
+            }
+        }
+
+        /* iPads, Tablets */
+        @media screen and (min-width: 481px) and (max-width: 768px) { 
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+        
+            .nav-bar {
+                background-color: #7b994e;
+                padding: 0px 16px 0 12px;
+                height: 74.4px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .logo-pic {
+                height: 42.4px;
+                padding: 16px;
+            }
+
+            .login-register {
+                display: flex;
+                padding: 14px;
+                font-family: 'Titillium Web', sans-serif;
+                font-size: 18px;
+            }
+
+            .image-cropper {
+                width: 45px;
+                height: 45px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            .profile-pic {
+                height: 100%;
+                width: auto;
+            }
+
+            .login {
+                padding: 10px;
+            }
+
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            a:active {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            .register {
+                text-align: center;
+                padding: 7px 0px 10px 0px;
+                border-style: solid;
+                width: 80px;
+            }
+        }
+
+        /* Small screens, laptops */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+        
+            .nav-bar {
+                background-color: #7b994e;
+                padding: 0px 16px 0 12px;
+                height: 74.4px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .logo-pic {
+                height: 42.4px;
+                padding: 16px;
+            }
+
+            .login-register {
+                display: flex;
+                padding: 14px;
+                font-family: 'Titillium Web', sans-serif;
+                font-size: 18px;
+            }
+
+            .image-cropper {
+                width: 45px;
+                height: 45px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            .profile-pic {
+                height: 100%;
+                width: auto;
+            }
+
+            .login {
+                padding: 10px;
+            }
+
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            a:active {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            .register {
+                text-align: center;
+                padding: 7px 0px 10px 0px;
+                border-style: solid;
+                width: 80px;
+            }
+        }
+
+        /* Desktops, large screens */
+        @media screen and (min-width: 1025px) and (max-width: 1200px) {
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+        
+            .nav-bar {
+                background-color: #7b994e;
+                padding: 0px 16px 0 12px;
+                height: 74.4px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .logo-pic {
+                height: 42.4px;
+                padding: 16px;
+            }
+
+            .login-register {
+                display: flex;
+                padding: 14px;
+                font-family: 'Titillium Web', sans-serif;
+                font-size: 18px;
+            }
+
+            .image-cropper {
+                width: 45px;
+                height: 45px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            .profile-pic {
+                height: 100%;
+                width: auto;
+            }
+
+            .login {
+                padding: 10px;
+            }
+
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            a:active {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            .register {
+                text-align: center;
+                padding: 7px 0px 10px 0px;
+                border-style: solid;
+                width: 80px;
+            }
+        }
+
+        /* Extra large screens, TV */
+        @media screen and (min-width: 1201px) {
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+        
+            .nav-bar {
+                background-color: #7b994e;
+                padding: 0px 16px 0 12px;
+                height: 74.4px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .logo-pic {
+                height: 42.4px;
+                padding: 16px;
+            }
+
+            .login-register {
+                display: flex;
+                padding: 14px;
+                font-family: 'Titillium Web', sans-serif;
+                font-size: 18px;
+            }
+
+            .image-cropper {
+                width: 45px;
+                height: 45px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 50%;
+            }
+
+            .profile-pic {
+                height: 100%;
+                width: auto;
+            }
+
+            .login {
+                padding: 10px;
+            }
+
+            a:link {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:visited {
+                color: white;
+                background-color: transparent;
+                text-decoration: none;
+            }
+            a:hover {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+            a:active {
+                color: white;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
+            .register {
+                text-align: center;
+                padding: 7px 0px 10px 0px;
+                border-style: solid;
+                width: 80px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- navbar ver.1 -->
+    <div class="nav-bar">
+        <img src="pictures/LogoMTK.png" alt="" class="logo-pic">
+        <div class="login-register">
+            <div class="image-cropper">
+                <img src="pictures/icon-person.png" alt="" class="profile-pic">
+            </div>
+            <a href="#" class="login">Login</a>
+            <a href="#" class="register">Register</a>
+        </div>
+        
+    </div>
+
+</body>
+</html>
